@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather Forecast App</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="new.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- <div class="container-fluid "> -->
+        <!-- <header>
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between navbar-container">
+                 Dark Mode Toggle 
+                <div class="form-check form-switch d-flex align-items-center">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label ms-2" for="darkModeToggle"></label>
+                </div>
+
+                Search Bar & Buttons
+                <div class="search-container">
+                    <input type="text" id="searchBox" placeholder="Search for your preferred city..."
+                        class="form-control">
+
+                    Search Button 
+                    <button class="btn btn-search" onclick="getWeather()">🔍</button>
+
+                    Current Location Button 
+                    <button class="btn btn-location">
+                        <img src="assets/Current Location.png" alt="Location">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header> -->
+        <header class="header">
+            
+                <div class="d-flex align-items-center justify-content-between navbar-container">
+                    <!-- Dark Mode Toggle -->
+                    <div class="form-check form-switch d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label ms-2" for="darkModeToggle"></label>
+                    </div>
+
+                    <!-- Search Bar & Buttons -->
+                    <div class="search-container d-flex align-items-center">
+                        <input type="text" id="searchBox" placeholder="Search for your preferred city..."
+                            class="form-control search-input">
+
+                        <!-- Search Button -->
+                        <button class="btn btn-search ms-2" onclick="getWeather()">🔍</button>
+
+                        <!-- Current Location Button -->
+                        <button class="btn btn-location ms-2">
+                            <img src="assets/Current Location.png" alt="Location">
+                        </button>
+                    </div>
+                </div>
+            
+        </header>
+
+
+        <div class="container-fluid ">
+            <div class="weather1 row">
+                <!-- Weather Info -->
+                <div class="col-md-3 d-flex">
+                    <div class="weather-card1">
+                        <h2 id="cityName">City Name</h2>
+                        <h1 class="time">09:03:00</h1>
+                        <p class="date">Thursday, 31 Aug</p>
+                    </div>
+                </div>
+                <!-- Detailed Weather Card -->
+                <div class="col-md-7">
+                    <div class="weather-card2">
+                        <!-- Left Section (Temperature, Feels Like, Sunrise & Sunset) -->
+                        <div class="left-section">
+                            <h1 id="temperature">24°C</h1>
+                            <p>Feels like: <span>22°C</span></p>
+                            <div class="info-item">
+                                <img src="assets/sunrise-white 1.png" alt="Sunrise">
+                                <p>Sunrise: <span id="sunriseTime">5:30am</span></p>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/sunset-white 1.png" alt="Sunset">
+                                <p>Sunset: <span id="sunsetTime">6pm</span></p>
+                            </div>
+                        </div>
+    
+                        <!-- Middle Section (Weather Icon & Condition) -->
+                        <div class="middle-section">
+                            <img src="assets/sunny.png" alt="Sunny" class="weather-icon">
+                            <p id="condition">Clear Sky</p>
+                        </div>
+    
+                        <!-- Right Section (Weather Parameters) -->
+                        <div class="right-section">
+                            <div class="info-item">
+                                <img src="assets/humidity 1.png" alt="Humidity">
+                                <p>Humidity: <span id="humidity">65%</span></p>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/wind 1.png" alt="Wind Speed">
+                                <p id="windSpeed">2km/h <br>Wind Speed</p>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/pressure-white 1.png" alt="Pressure">
+                                <p>997hPa <br>Pressure</p>
+                            </div>
+                            <div class="info-item">
+                                <img src="assets/uv-white 1.png" alt="UV Index">
+                                <p>8 <br>UV</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 Days Forecast -->
+
+                <div class="col-md-4">
+                    <div id="forecastContainer">
+                        <h2>5-Day Forecast</h2>
+                        <div class="forecast-item">
+                            <img src="assets/clouds_1.png" class="icon">
+                            <span class="temp">20°C</span>
+                            <span class="date">Friday, 1 Sep</span>
+                        </div>
+                        <div class="forecast-item">
+                            <img src="assets/mist_1.png" class="icon">
+                            <span class="temp">22°C</span>
+                            <span class="date">Saturday, 2 Sep</span>
+                        </div>
+                        <div class="forecast-item">
+                            <img src="assets/clear_2.png" class="icon">
+                            <span class="temp">27°C</span>
+                            <span class="date">Sunday, 3 Sep</span>
+                        </div>
+                        <div class="forecast-item">
+                            <img src="assets/drizzle_1.png" class="icon">
+                            <span class="temp">18°C</span>
+                            <span class="date">Monday, 4 Sep</span>
+                        </div>
+                        <div class="forecast-item">
+                            <img src="assets/rain_1.png" class="icon">
+                            <span class="temp">16°C</span>
+                            <span class="date">Tuesday, 5 Sep</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hourly Forecast -->
+                <div class="col-md-5">
+                    <div class="weather-card">
+                        <h3>Hourly Forecast</h3>
+                        <div id="hourlyForecastContainer" class="hourly-grid">
+                            <div class="hourly-card">
+                                <p>12:00</p>
+                                <img src="assets/clear_2.png" alt="Weather">
+                                <p class="hourly-temp">29°C</p>
+                                <img src="assets/navigation1.png" alt="Navigation">
+                                <p>3km/h</p>
+                            </div>
+                            <div class="hourly-card">
+                                <p>15:00</p>
+                                <img src="assets/clouds 2.png" alt="Weather">
+                                <p class="hourly-temp">27°C</p>
+                                <img src="assets/navigation1.png" alt="Navigation">
+                                <p>2km/h</p>
+                            </div>
+                            <div class="hourly-card">
+                                <p>18:00</p>
+                                <img src="assets/clouds 2.png" alt="Weather">
+                                <p class="hourly-temp">27°C</p>
+                                <img src="assets/navigation1.png" alt="Navigation">
+                                <p>3km/h</p>
+                            </div>
+                            <div class="hourly-card">
+                                <p>21:00</p>
+                                <img src="assets/clear_2.png" alt="Weather">
+                                <p class="hourly-temp">25°C</p>
+                                <img src="assets/navigation1.png" alt="Navigation">
+                                <p>3km/h</p>
+                            </div>
+                            <div class="hourly-card">
+                                <p>00:00</p>
+                                <img src="assets/clear_2.png" alt="Weather">
+                                <p class="hourly-temp">22°C</p>
+                                <img src="assets/navigation1.png" alt="Navigation">
+                                <p>3km/h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+
+
+
+
+
+
+    <script src="wheather.js"></script>
+
+
+
+
+
+</body>
+
+</html>

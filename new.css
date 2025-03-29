@@ -1,0 +1,328 @@
+/* Header Styling */
+/* body{
+    height: 100vh;
+} */
+.header {
+    background: #222; /* Dark background */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar Container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Input */
+.search-input {
+    width: 250px; /* Adjust width */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-search {
+    background: #007bff;
+    color: white;
+}
+
+.btn-search:hover {
+    background: #0056b3;
+}
+
+.btn-location {
+    background: #28a745;
+}
+
+.btn-location:hover {
+    background: #1e7e34;
+}
+
+.btn-location img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Dark Mode Toggle */
+.form-check-input {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+.container-fluid {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Row Styling */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Adds spacing between boxes */
+}
+
+/* Weather Card Styling */
+.weather-card1, .weather-card2 {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+}
+
+/* Weather Card 1 (Small Box) */
+.weather-card1 {
+    min-width: 200px;
+    padding: 60px;
+}
+
+/* Weather Card 2 (Bigger Box with Sections) */
+.weather-card2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    min-width: 500px;
+}
+
+/* Left, Middle, and Right Sections inside Weather Card 2 */
+.left-section, .middle-section, .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Weather Icon in Middle Section */
+.weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+/* Weather Parameters (Humidity, Wind, Pressure, UV) */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item img {
+    width: 30px;
+    height: 30px;
+}
+#forecastContainer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Forecast Heading */
+#forecastContainer h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Forecast Items */
+.forecast-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.1s ease, background 0.1s ease;
+}
+
+/* Hover Effect */
+.forecast-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Icons */
+.forecast-item img.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Temperature and Date */
+.forecast-item .temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.forecast-item .date {
+    font-size: 1rem;
+    color: #ddd;
+}
+.weather-card {
+    background: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Hourly Forecast Title */
+.weather-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Hourly Grid */
+.hourly-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+/* Individual Hourly Card */
+.hourly-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 80px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover Effect */
+.hourly-card:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+}
+.hourly-card {
+    background: #3a3a3a;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 80px;
+    width: 90px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Time */
+.hourly-card p {
+    margin: 5px 0;
+}
+
+/* Temperature */
+.hourly-card .hourly-temp {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Icons */
+.hourly-card img {
+    width: 30px;
+    /* height: 40px; */
+}
+
+/* Responsive: Stack Items on Small Screens */
+@media (max-width: 576px) {
+    .hourly-grid {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .hourly-card {
+        min-width: 70px;
+    }
+}
+/* Responsive: Stack Items on Small Screens */
+@media (max-width: 576px) {
+    .forecast-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+}  
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-3, .col-9 {
+        width: 100%;
+    }
+
+    .weather-card2 {
+        flex-direction: column;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+.btn-location img {
+    max-width: 98px; /* Keep image small inside button */
+    margin-right: 5px;
+    margin-bottom: 0; /* Remove the extra bottom margin */
+    height: 60px;
+    width: 150px;
+}
+#hourlyForecastContainer {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    gap: 15px; /* Increase spacing between items */
+    flex-wrap: wrap; /* Allow items to wrap instead of scrolling */
+    padding: 10px;
+    height: 300px;
+    width: 100%; /* Ensure full-width container */
+}
